@@ -22,9 +22,10 @@ namespace API.Entities
         public string Country { get; set; }
         public ICollection<Photo> Photos { get; set; } // One to many relationship with Photo
 
-        // public int GetAge()
-        // {
-        //     return DateOfBirth.CalculateAge();
-        // }
+        /// <summary>Users that have liked this AppUser.</summary>
+        public ICollection<UserLike> LikedByUsers { get; set; }
+        
+        /// <summary>Users that this AppUser have liked.</summary>
+        public ICollection<UserLike> LikedUsers { get; set; }
     }
 }
